@@ -1,0 +1,158 @@
+    1  wget www.github.com
+    2  history > cmds.log
+    3  wget www.github.com
+    4  login as: yar23fa
+    5  yar23fa@172.20.25.9's password:
+    6  Activate the web console with: systemctl enable --now cockpit.socket
+    7  Register this system with Red Hat Insights: insights-client --register
+    8  Create an account or view all your systems at https://red.ht/insights-dashboard
+    9  Last login: Thu Aug 24 16:09:25 2023 from 172.29.96.203
+   10  [yar23fa@sjsu ~]$ wget www.github.com
+   11  URL transformed to HTTPS due to an HSTS policy
+   12  --2023-08-24 18:23:08--  https://www.github.com/
+   13  Resolving www.github.com (www.github.com)... 140.82.114.4
+   14  Connecting to www.github.com (www.github.com)|140.82.114.4|:443... connected.
+   15  HTTP request sent, awaiting response... 301 Moved Permanently
+   16  Location: https://github.com/ [following]
+   17  --2023-08-24 18:23:08--  https://github.com/
+   18  Resolving github.com (github.com)... 140.82.114.4
+   19  Connecting to github.com (github.com)|140.82.114.4|:443... connected.
+   20  HTTP request sent, awaiting response... 200 OK
+   21  Length: unspecified [text/html]
+   22  Saving to: ‘index.html.1’
+   23  index.html.1            [ <=>                ] 230.20K  --.-KB/s    in 0.04s
+   24  2023-08-24 18:23:08 (5.89 MB/s) - ‘index.html.1’ saved [235727]
+   25  history > cmds.log
+   26  pwd
+   27  cd cmds.log
+   28  ls
+   29  passwd
+   30  wget www.github.com
+   31  ls
+   32  rm index.html.1
+   33  ls
+   34  rm index.html.2
+   35  ls
+   36  git add cmds.log
+   37  git remote add origin https://github.com/khmorad/cs131.git
+   38  ls
+   39  rm cmds.log
+   40  wget www.github.com
+   41  history > cmds.log
+   42  ls
+   43  rm index.html.1
+   44  git remote add origin https://github.com/khmorad/cs131.git
+   45  ls
+   46  git clone https://github.com/khmorad/cs131.git
+   47  ls
+   48  git clone https://github.com/khmorad/cs131.git
+   49  cls
+   50  ls
+   51  git clone https://github.com/khmorad/cs131.git
+   52  ls
+   53  git clone https://github.com/khmorad/cs131.git
+   54  history
+   55  man history
+   56  ls
+   57  touch aa.txt
+   58  touch bb.txt
+   59  touch cc.jpeg
+   60  ls
+   61  ls *.txt
+   62  ls ?.txt
+   63  touch a.jpeg
+   64  ls ?.txt
+   65  ls
+   66  ls ?.jpeg
+   67  ls -l *.txt
+   68  nano cmds.log
+   69  ls
+   70  ls
+   71  rm *.txt
+   72  ls
+   73  rm *.jpeg
+   74  ls
+   75  nano cmds.log
+   76  vin cmds.log
+   77  vim cmds.log
+   78  ls
+   79  mkdir ws1
+   80  ls
+   81  mv cmds.log ws1
+   82  ls
+   83  cd ws1
+   84  cd ..
+   85  cd ws1
+   86  ls
+   87  nano cmds.log
+   88  ls
+   89  cd ..
+   90  ls
+   91  rm ws1
+   92  rmdir ws1
+   93  cd ws1
+   94  ls
+   95  rm cmds.log
+   96  cls
+   97  ls
+   98  cd ..
+   99  ls
+  100  rm index.html 
+  101  ls
+  102  wget www.github.com
+  103  ls
+  104  git remote add origin https://github.com/khmorad/cs131.git
+  105  rm index.html 
+  106  git init
+  107  ls
+  108  -rf .git
+  109  ls
+  110  mkdir cs131
+  111  mv ws1 cs131
+  112  cd cs131
+  113  ls
+  114  git init
+  115  ls
+  116  git status
+  117  ls
+  118  git add .
+  119  git commit -m "ws1 8/28/2023"
+  120  git config --global user.email "khakho.morad@gmail.com"
+  121  git config --global user.name "khmorad"
+  122  git commit -m "ws1 8/28/2023"
+  123  git add .
+  124  git commit -m "ws1 8/28/203"
+  125  ls
+  126  git status
+  127  git ls
+  128  ls
+  129  git add .
+  130  git commit -m "ws1 8/28/2023"
+  131  touch yaboy.txt
+  132  ls
+  133  git add .
+  134  git commit -m "ws1 8/28/2023"
+  135  git push -u origin master
+  136  git push -u origin mastergit remote add origin https://github.com/khmorad/cs131.git
+  137  git remote add origin https://github.com/khmorad/cs131.git
+  138  git push -u origin master
+  139  git remote add origin https://github.com/khmorad/cs131.git
+  140  git push -u origin master
+  141  git status
+  142  cd cs131
+  143  git status
+  144  ls
+  145  git push -u origin master
+  146  git add ws1
+  147  git commit -m "ws1 8/28/2023"
+  148  ls
+  149  cd ..
+  150  mv ws1 cs131 yar23fa@sjsu
+  151  ls
+  152  cd cs131
+  153  ls
+  154  cd ws1
+  155  ls
+  156  wget www.github.com
+  157  ls
+  158  history > cmds.log
