@@ -13,7 +13,7 @@ This repository contains assignments and projects for the CS 131 Processing Big 
 ## worksheets/Assignments
 
 1. [worksheet 1](worksheet_1/) - setting up the environment (puTTy, cisco any connect, and githup repo).
-2. [worksheet 2](worksheet_2/) - starting with first big data (to be announced...)
+2. [worksheet 2](worksheet_2/) - working with large taxi dataset file "cp /datasets/taxidata.tar.gz"
 
 ## Tools Used
 
