@@ -1,0 +1,471 @@
+    1  wget www.github.com
+    2  history > cmds.log
+    3  wget www.github.com
+    4  login as: yar23fa
+    5  yar23fa@172.20.25.9's password:
+    6  Activate the web console with: systemctl enable --now cockpit.socket
+    7  Register this system with Red Hat Insights: insights-client --register
+    8  Create an account or view all your systems at https://red.ht/insights-dashboard
+    9  Last login: Thu Aug 24 16:09:25 2023 from 172.29.96.203
+   10  [yar23fa@sjsu ~]$ wget www.github.com
+   11  URL transformed to HTTPS due to an HSTS policy
+   12  --2023-08-24 18:23:08--  https://www.github.com/
+   13  Resolving www.github.com (www.github.com)... 140.82.114.4
+   14  Connecting to www.github.com (www.github.com)|140.82.114.4|:443... connected.
+   15  HTTP request sent, awaiting response... 301 Moved Permanently
+   16  Location: https://github.com/ [following]
+   17  --2023-08-24 18:23:08--  https://github.com/
+   18  Resolving github.com (github.com)... 140.82.114.4
+   19  Connecting to github.com (github.com)|140.82.114.4|:443... connected.
+   20  HTTP request sent, awaiting response... 200 OK
+   21  Length: unspecified [text/html]
+   22  Saving to: ‘index.html.1’
+   23  index.html.1            [ <=>                ] 230.20K  --.-KB/s    in 0.04s
+   24  2023-08-24 18:23:08 (5.89 MB/s) - ‘index.html.1’ saved [235727]
+   25  history > cmds.log
+   26  pwd
+   27  cd cmds.log
+   28  ls
+   29  passwd
+   30  wget www.github.com
+   31  ls
+   32  rm index.html.1
+   33  ls
+   34  rm index.html.2
+   35  ls
+   36  git add cmds.log
+   37  git remote add origin https://github.com/khmorad/cs131.git
+   38  ls
+   39  rm cmds.log
+   40  wget www.github.com
+   41  history > cmds.log
+   42  ls
+   43  rm index.html.1
+   44  git remote add origin https://github.com/khmorad/cs131.git
+   45  ls
+   46  git clone https://github.com/khmorad/cs131.git
+   47  ls
+   48  git clone https://github.com/khmorad/cs131.git
+   49  cls
+   50  ls
+   51  git clone https://github.com/khmorad/cs131.git
+   52  ls
+   53  git clone https://github.com/khmorad/cs131.git
+   54  history
+   55  man history
+   56  ls
+   57  touch aa.txt
+   58  touch bb.txt
+   59  touch cc.jpeg
+   60  ls
+   61  ls *.txt
+   62  ls ?.txt
+   63  touch a.jpeg
+   64  ls ?.txt
+   65  ls
+   66  ls ?.jpeg
+   67  ls -l *.txt
+   68  nano cmds.log
+   69  ls
+   70  ls
+   71  rm *.txt
+   72  ls
+   73  rm *.jpeg
+   74  ls
+   75  nano cmds.log
+   76  vin cmds.log
+   77  vim cmds.log
+   78  ls
+   79  mkdir ws1
+   80  ls
+   81  mv cmds.log ws1
+   82  ls
+   83  cd ws1
+   84  cd ..
+   85  cd ws1
+   86  ls
+   87  nano cmds.log
+   88  ls
+   89  cd ..
+   90  ls
+   91  rm ws1
+   92  rmdir ws1
+   93  cd ws1
+   94  ls
+   95  rm cmds.log
+   96  cls
+   97  ls
+   98  cd ..
+   99  ls
+  100  rm index.html 
+  101  ls
+  102  wget www.github.com
+  103  ls
+  104  git remote add origin https://github.com/khmorad/cs131.git
+  105  rm index.html 
+  106  git init
+  107  ls
+  108  -rf .git
+  109  ls
+  110  mkdir cs131
+  111  mv ws1 cs131
+  112  cd cs131
+  113  ls
+  114  git init
+  115  ls
+  116  git status
+  117  ls
+  118  git add .
+  119  git commit -m "ws1 8/28/2023"
+  120  git config --global user.email "khakho.morad@gmail.com"
+  121  git config --global user.name "khmorad"
+  122  git commit -m "ws1 8/28/2023"
+  123  git add .
+  124  git commit -m "ws1 8/28/203"
+  125  ls
+  126  git status
+  127  git ls
+  128  ls
+  129  git add .
+  130  git commit -m "ws1 8/28/2023"
+  131  touch yaboy.txt
+  132  ls
+  133  git add .
+  134  git commit -m "ws1 8/28/2023"
+  135  git push -u origin master
+  136  git push -u origin mastergit remote add origin https://github.com/khmorad/cs131.git
+  137  git remote add origin https://github.com/khmorad/cs131.git
+  138  git push -u origin master
+  139  git remote add origin https://github.com/khmorad/cs131.git
+  140  git push -u origin master
+  141  git status
+  142  cd cs131
+  143  git status
+  144  ls
+  145  git push -u origin master
+  146  git add ws1
+  147  git commit -m "ws1 8/28/2023"
+  148  ls
+  149  cd ..
+  150  mv ws1 cs131 yar23fa@sjsu
+  151  ls
+  152  cd cs131
+  153  ls
+  154  cd ws1
+  155  ls
+  156  wget www.github.com
+  157  ls
+  158  history > cmds.log
+  159  ls
+  160  rm index.html
+  161  cd..
+  162  cd ..
+  163  cd ws1
+  164  ls
+  165  cd ..
+  166  git add .
+  167  git commit -m "ws1 8/28/2023"
+  168  git push -u origin master
+  169  git checkout main
+  170  git branch -a
+  171  git branch -m master main
+  172  git push origin main
+  173  git pull origin main
+  174  git push origin main
+  175  ls
+  176  git branch
+  177  git branch -m main master
+  178  git branch
+  179  git checkout -b backup-master
+  180  git branch -m master main
+  181  git push origin main
+  182  git pull origin main
+  183  git push origin main
+  184  git pull origin main
+  185  hint: (e.g. 'git pull ...') before pushing again.
+  186  hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+  187  ls
+  188  cd cs131
+  189  git branch
+  190  git chekcout main
+  191  git checkout main
+  192  git branch
+  193  git branch -m master
+  194  git branch
+  195  ls
+  196  rm yaboy.txt 
+  197  git add .
+  198  git commit -m removed stuff
+  199  git commit -m "remove stuff"
+  200  git push origin -u master
+  201  git branch -m yar
+  202  git branch
+  203  git checkout main
+  204  git branch
+  205  git merge yar
+  206  git merge --allow-unrelated-histories yar
+  207  ls cs1
+  208  ls
+  209  cd cs131
+  210  git branch
+  211  git checkout yar
+  212  git branch
+  213  git che
+  214  git checkout main
+  215  git merge --alow-unrelated-histories yar
+  216  git merge --allow-unrelated-histories yar
+  217  git checkout main
+  218  git branch
+  219  ls
+  220  git push origin main
+  221  git branch
+  222  git checkout yar
+  223  git branch -m ws1
+  224  git branch
+  225  git add .
+  226  git commit "ws1 8/29/2023"
+  227  ls
+  228  touch yoyo.txt
+  229  ls
+  230  git add .
+  231  git commit -m "added random"
+  232  git push origin -u ws1
+  233  ls
+  234  rm yoyo.txt 
+  235  cd cs131
+  236  vim hellovim.txt
+  237  ls
+  238  cd cs131
+  239  ls
+  240  vim hello.txt
+  241  ls
+  242  cat hello.txt 
+  243  vim hello.txt
+  244  ls
+  245  cd ..
+  246  ls
+  247  cd cs131
+  248  ls
+  249  rm hello.txt
+  250  cd cs131
+  251  ls
+  252  mkdir ws2
+  253  ls
+  254  cs ws2
+  255  cd ws2
+  256  ls
+  257  cp /datasets/taxidata.tar.gz .
+  258  ls
+  259  cat taxidata.tar.gz 
+  260  cd cs131
+  261  cd ws2
+  262  ls
+  263  tar -xvzf taxidate.tar.gz
+  264  ls
+  265  tar -xvzf taxidata.tar.gz 
+  266  ls
+  267  grep '^.*2019-03-12.*"dropoff".*$' data.csv > temp_results.txt
+  268  cs taxidata
+  269  cd taxidata/
+  270  grep '^.*2019-03-12.*"dropoff".*$' data.csv > temp_results.txt
+  271  ls
+  272  grep '^.*2019-03-12.*"dropoff".*$' 2019-03.csv > temp_results.txt
+  273  ls
+  274  cat temp_results.txt 
+  275  nano temp_results.txt
+  276  rm temp_results.txt 
+  277  ls
+  278  cat 2019-01.csv 
+  279  cs cs131
+  280  cd cs131
+  281  ls
+  282  cd ws2
+  283  ls
+  284  cd taxidata
+  285  ls
+  286  head 2019-01.csv 
+  287  cd cs131
+  288  cd ws2
+  289  ls
+  290  head temp_results.txt 
+  291  rm temp_results.txt 
+  292  ls
+  293  c;s
+  294  cls
+  295  clear
+  296  ls
+  297  grep -c "2019-03-12" taxi_data.csv >> results.txt
+  298  clear
+  299  ls
+  300  cd taxidata/
+  301  ls
+  302  cd ..
+  303  grep "2019-03-12" taxidata > results.txt
+  304  ls
+  305  head results.txt 
+  306  cat results.txt 
+  307  clear
+  308  ls
+  309  rm results.txt 
+  310  clear
+  311  ls
+  312  cd taxidata/
+  313  ls
+  314  grep 20 taile > bobo.txt
+  315  grep 20 tail > bobo.txt
+  316  cleat
+  317  clear
+  318  cd..
+  319  cd ..
+  320  clear
+  321  ls
+  322  cd taxidata/
+  323  ls
+  324  sort 2019-03.csv
+  325  clear
+  326  ls
+  327  head 2019-03.csv 
+  328  cd ..
+  329  ls
+  330  rm taxidata
+  331  rmdir taxidata/
+  332  cd taxidata/
+  333  ls
+  334  rm *
+  335  ls
+  336  cd ..
+  337  ls
+  338  rmdir taxidata/
+  339  clear
+  340  cd ..
+  341  clear
+  342  ls ws2
+  343  tar -xzvf taxidata.tar.gz
+  344  ls
+  345  cd ws2
+  346  clear
+  347  [yar23fa@sjsu cs131]$ tar -xzvf taxidata.tar.gz
+  348  tar (child): taxidata.tar.gz: Cannot open: No such file or directory
+  349  tar (child): Error is not recoverable: exiting now
+  350  tar: Child returned status 2
+  351  tar: Error is not recoverable: exiting now
+  352  [yar23fa@sjsu cs131]$ tar -xzvf taxidata.tar.gz
+  353  ls
+  354  clear
+  355  tar -xzvf taxidata.tar.gz
+  356  ls
+  357  cd taxidata/
+  358  ls
+  359  grep "2019-03-12" taxidata/2019-03.csv > results.txt
+  360  cd ..
+  361  grep "2019-03-12" taxidata/2019-03.csv > results.txt
+  362  ls
+  363  head results.txt 
+  364  grep -c  "2019-03-12" taxidata/2019-03.csv > results.txt
+  365  clear
+  366  ls
+  367  head results.txt 
+  368  clear
+  369  ls
+  370  em results.txt 
+  371  cd taxidata/
+  372  rm *
+  373  cd ..
+  374  rmdir taxidata/
+  375  ls
+  376  rm results.txt 
+  377  clear
+  378  os
+  379  clear
+  380  ls
+  381  tar -xzvf taxidata.tar.gz 
+  382  ls
+  383  cd taxidata/
+  384  ls
+  385  cd ..
+  386  grep "2019-03-12" taxidata/2019-03.csv > results.txt
+  387  grep -c  "2019-03-12" taxidata/2019-03.csv >> results.txt
+  388  head results.txt 
+  389  cd taxidata/
+  390  ls
+  391  head 2019-01.csv 
+  392  cd cs131
+  393  cd ws2
+  394  ls
+  395  clear
+  396  ls
+  397  cd taxidata/
+  398  ls
+  399  2019-01.csv  2019-03.csv  2019-05.csv  2019-07.csv  2019-09.csv  2019-11.csv
+  400  2019-02.csv  2019-04.csv  2019-06.csv  2019-08.csv  2019-10.csv  2019-12.csv
+  401  head 2019-03.csv
+  402  cpear
+  403  clear
+  404  ls
+  405  cd ..
+  406  ls
+  407  rm results.txt 
+  408  csvgrep -c tpep_pickup_datetime -m "2019-03-12" taxidata/2019-03.csv
+  409  ls
+  410  cd taxidata/
+  411  ls
+  412  head 50 2019-03.csv
+  413  clear
+  414  ls
+  415  cd ..
+  416  ls
+  417  clear
+  418  ls
+  419  grep ',"2019-03-12' taxidata/*.csv
+  420  clear
+  421  ls
+  422  ls taxidata
+  423  cd taxidata/
+  424  head 2019-03.csv 
+  425  clear
+  426  ls
+  427  clear
+  428  cd ..
+  429  ls
+  430  clear
+  431  ls
+  432  grep '\d.\d,"2019-03-12' taxidata/2019-03.csv > results.txt
+  433  ls
+  434  head results.txt 
+  435  grep '2019-03-12' taxidata/2019-03.csv > results.txt
+  436  head results.txt 
+  437  grep '\d,"2019-03-12' taxidata/2019-03.csv > results.txt
+  438  head results.txt 
+  439  grep -E '\d,"2019-03-12' taxidata/2019-03.csv > results.txt
+  440  head results.txt 
+  441  grep -E "\d,.2019-03-12" taxidata/2019-03.csv > results.txt
+  442  head results.txt 
+  443  clear
+  444  ls
+  445  cat results.txt 
+  446  rm results.txt 
+  447  clear
+  448  ls
+  449  grep -P '\d,2019-03-12' taxidata/*.csv > results.txt
+  450  ls
+  451  head -n 2 results.txt 
+  452  head results.txt 
+  453  clear
+  454  grep "2019-03-12" taxidata/2019-03.csv >results.txt 
+  455  head rea
+  456  head results.txt 
+  457  grep -P '^\d+,"2019-03-12' taxidata/*.csv
+  458  awk -F',' '$2 ~ /^"2019-03-12/' taxidata/*.csv
+  459  clear
+  460  ls
+  461  rm results.txt 
+  462  clear
+  463  ls
+  464  awk -F',' '$2 ~ /^"2019-03-12/' taxidata/2019-03.csv > results.txt
+  465  ls
+  466  tail -n 20 results.txt > tmp.txt
+  467  mv tmp.txt results.txt 
+  468  ls
+  469  awk -F',' '$2 ~ /^"2019-03-12/' taxidata/2019-03.csv | wc -l >> results.txt
+  470  tail results.txt 
+  471  history > cmds.log
