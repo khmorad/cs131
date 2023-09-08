@@ -1,0 +1,49 @@
+  568  mkdir ws3
+  569  ls ws3
+  572  ls
+  580  cd ws3
+  581  ls
+  582  pwd
+  589  cp /datasets/taxidata.tar.gz .
+  590  ls
+       #unzip the .tar.gz
+  591  tar -xzvf taxidata.tar.gz 
+  594  cd ws3
+       #removed the originl zipped file
+  595  rm taxidata.tar.gz 
+  598  ls
+  599  cd taxidata/
+  600  ls
+  601  head 2019-01.csv 
+  602  ls
+  603  cd ..
+  604  cd taxidata/ 
+       #this grep operation gave the worng result
+  609  grep -E '^[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,[^,]+,([0-9]+),' 2019-1.csv | sort -t',' -k8 > sorted_file.csv
+  622  ls
+  623  cd taxidata/ | ls taxidata/
+  624  head -10 2019-01.csv
+  625  cd taxidata/
+  626  head -10 2019-01.csv
+  627  cd ..
+       #this grep operation was used for ws3 
+  650  grep -E '^[^,]+,"2019-01-' taxidata/2019-01.csv | cut -d',' -f8 | sort | uniq -c | sort -rn | head -n 3 > results.txt
+  651  ls
+  652  cat results.txt 
+       #copy contents in results.txt to ws3.txt
+  653  cp results.txt ws3.txt
+  654  ls
+  655  cat ws3.txt 
+  656  rm results.txt 
+  657  ls
+  658  cd taxidata/
+  659  ls
+  660  rm *
+  661  cd ..
+  662  rmdir taxidata/
+  663  ls
+  664  cat ws3
+  665  cat ws3.txt 
+  666  ls
+  667  nano ws3.txt 
+  668  history > cmds.log
