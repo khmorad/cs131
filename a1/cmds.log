@@ -1,0 +1,41 @@
+  685  mkdir a1
+  688  cd a1
+  689  echo "hi"
+  690  echo $HOME
+  691  id -u
+  697  mkdir temp
+  698  ls
+  699  chmod -x temp
+  700  cd temp
+  701  ls temp
+  702  ls -l temp
+  703  touch temp/testing.txt
+  704  ls 
+  706  mkdir temp2
+  707  mv temp2 temp3
+  708  cp temp3 temp4
+  709  cp -r  temp3 temp4
+  710  ls /proc/ | grep mem
+  711  ls /proc/ | grep cpu
+  712  head /proc/meminfo 
+  713  cat /proc/cpuinfo | grep processor | we -l
+  714  cat /proc/cpuinfo | grep processor | wc -l
+  715  ls  /proc/cpuinfo 
+  716  car 4 head /proc/cpuinfo 
+  717  cat 4 head /proc/cpuinfo 
+  718  cat /proc/cpuinfo | grep "model name" | head -n 1
+  719  cat /proc/cpuinfo | grep "model" 
+  720  cat /proc/cpuinfo | grep "model" | head -n 1
+  721  cat /proc/cpuinfo | grep "clock" | head -n 1
+  722  cat /proc/cpuinfo | grep "clock" | head -n 5
+  723  cat /etc/os-release 
+  725  ls -l /etc/os-release
+  726  exit
+  #im going to use "cp output.txt a1.txt" later on to copy the
+  #output contents to as1.txt
+  761  script output.txt
+  762  ls
+  763  nano output.txt 
+  764  cp output.txt a1.txt
+  770  ls
+  771  history > cmds.log
