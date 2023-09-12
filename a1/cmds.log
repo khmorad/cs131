@@ -1,22 +1,32 @@
+  #1 make a directory a1 in home directory
   685  mkdir a1
   688  cd a1
   689  echo "hi"
+  #2 displaying home directory using echo and $HOME command
   690  echo $HOME
+  #3 displaying user UID
   691  id -u
+  #4 making a temp direcoty and using chmod to chnage permissions
   697  mkdir temp
   698  ls
+  #using chmod and -x to remove execute permission
   699  chmod -x temp
+  #permission denied for the following commands*****
   700  cd temp
   701  ls temp
   702  ls -l temp
   703  touch temp/testing.txt
-  704  ls 
+  #************************************************
+  704  ls
+  #5 creating directory temp2 
   706  mkdir temp2
   707  mv temp2 temp3
   708  cp temp3 temp4
   709  cp -r  temp3 temp4
+  #6 find out which file under firectory /proc/ using only "ls" and grep
   710  ls /proc/ | grep mem
   711  ls /proc/ | grep cpu
+  #7 use head to check memory information as well as total memory on server
   712  head /proc/meminfo 
   713  cat /proc/cpuinfo | grep processor | we -l
   714  cat /proc/cpuinfo | grep processor | wc -l
@@ -26,11 +36,18 @@
   718  cat /proc/cpuinfo | grep "model name" | head -n 1
   719  cat /proc/cpuinfo | grep "model" 
   720  cat /proc/cpuinfo | grep "model" | head -n 1
-  721  cat /proc/cpuinfo | grep "clock" | head -n 1
-  722  cat /proc/cpuinfo | grep "clock" | head -n 5
-  723  cat /etc/os-release 
+  #8 using head to check cpu information and mode number
+  721  cat /proc/cpuifo  | grep "cpu" | head -n 1
+  722  cat /proc/cpuinfo | grep "clock" | head -n 1
+  723  cat /proc/cpuinfo | grep "clock" | head -n 5
+  #9 identifying ios system information as well as version
+  #more description on how to specifically display version using grep can be found
+  #in a1
+  724  cat /etc/os-release 
   725  ls -l /etc/os-release
-  726  exit
+  #10 finding the premission given to all users 
+  726  ls -l /usr/lib/os-release
+  727  exit
   #im going to use "cp output.txt a1.txt" later on to copy the
   #output contents to as1.txt
   761  script output.txt
