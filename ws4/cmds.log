@@ -1,0 +1,70 @@
+  #Task 1 
+  834  vi ~/.bashrc
+  835  cat .bashrc
+  836  vim ~/.bashrc
+  837  cat .bashrc
+  838  source ~/.bashrc
+  #testing out l and w to see if it worked
+  839  l
+  840  w
+  842  cd cs131/
+  844  ls
+  845  mkdir ws4
+  846  cd ws4
+  847  mkdir FARE
+  848  cd FARE
+  852  cd cs131/ws4
+  854  cp /datasets/taxidata.tar.gz .
+  855  tar -xzvf taxidata.tar.gz
+  857  rm taxidata.tar.gz 
+  859  cd taxidata/
+  861  head 2019-01.csv
+  869  cat .bashrc
+  #using nano to input the aliases in .bashrc
+  871  nano .bashrc
+  #used this command instead of loging off the virtual environment
+  872  source ~/.bashrc
+  875  l
+  876  w
+  884  mv 2019-06.csv ~/cs131/ws4/
+  885  cd ..
+  886  ls
+  888  cd cs131/ws4
+  #using grep and awk to redirect the fare amount
+  903  grep -E ',48\.0,.*161\.0,' 2019-06.csv | awk -F',' '{print $11}' > 48.0-161.0.txt
+  904  ls
+  905  cat 48.0-161.0.txt 
+  906  ls
+  907  mv 48.0-161.0.txt FARE
+  908  cd FARE
+  913  cd taxidata/
+  914  ls
+  915  head 2019-01.csv
+  916  cd ..
+  #using grep again to redirect the fare amound fo the second pickup/dropoff location
+  918  grep -E ',163\.0,.*229\.0,' 2019-06.csv | awk -F',' '{print $11}' > 163.0-229.0.txt
+  920  mv 163.0-229.0.txt FARE
+  921  cd FARE
+  944  cd cs131/ws4/FARE
+  # summing the values inside txt file
+  970  sum=$(cat 163.0-229.0.txt | paste -sd+ | bc -l)
+  #finding the total amound of numbers in the file
+  971  numamount=$(cat 163.0-229.0.txt | wc -l)
+  972  echo "$sum/$numamount"
+  # now using echo and bc finding the average
+  973  echo "$sum/$numamount" | bc
+  # using "scale=2" to get the two decimal places of the
+  # average
+  975  echo "scale=2; $sum/$numamount" | bc
+  976  echo "$sum/$numamount" | bc
+  977  echo "scale=2; $sum/$numamount" | bc
+  978  echo "scale=2; $sum/$numamount" | bc >> 163.0-229.0.txt 
+  979  cat 163.0-229.0.txt 
+  983  sum=$(cat 48.0-161.0.txt | paste -sd+ | bc -l)
+  984  numamount=$(cat 48.0-161.0.txt | wc -l)
+  985  echo "scale=2; $sum/$numamount" | bc
+  986  echo $sum
+  987  echo $numamount 
+  988  echo "scale=2; $sum/$numamount" | bc
+  989  echo "scale=2; $sum/$numamount" | bc >> 48.0-161.0.txt 
+  994  history > cmds.log
