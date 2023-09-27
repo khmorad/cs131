@@ -10,7 +10,7 @@
  1122  for dolocationid in $(cut -d ',' -f 9 top_100_dropoff.txt); do
  1123  grep ",$dolocationid," filtered_data.csv > "cs131/ws5/do234/$dolocationid.txt"
  1124  done
- #im suspecting my for loop is not working currectly since im getting nothing
+ #now using wc -l and inputing the output in ws5.txt
  1125  wc -l /mnt/scratch/yar23fa/cs131/ws5/do234/1.0.txt /mnt/scratch/yar23fa/cs131/ws5/do234/3.0.txt /mnt/scratch/yar23fa/cs131/ws5/do234/48.0.txt /mnt/scratch/yar23fa/cs131/ws5/do234/223.0.txt > /mnt/scratch/yar23fa/cs131/ws5/ws5.txt
  1126  done
  1127  history > cmds.log
