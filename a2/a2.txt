@@ -1,0 +1,77 @@
+Script started on 2023-09-26 20:56:55-04:00
+#task1
+bash-4.4$ cut -d ',' -f 17 may_11_data.csv > total_amounts.txt
+bash-4.4$ sum=$(cat total_amounts.txt | paste -sd+ | bc -l)
+bash-4.4$ numamount=$(cat total_amounts.txt | wc -l
+bash-4.4$ echo "$sum/$numamount" | bc
+17
+bash-4.4$ echo "scale=2; $sum/$numamount" | bc
+17.86
+#task2
+bash-4.4$ sort -n total_amounts.txt | tail -n 1
+1309.8
+#task 3
+bash-4.4$ awk -F ',' '$4 >= 3' 2019-05.csv > 5-2019-3_or_more.csv
+bash-4.4$ cut -d ',' -f 9 5-2019-3_or_more.csv | sort | uniq -c | sort -nr > dropoff-count.txt
+bash-4.4$ head dropoff-count.txt 
+  39909 236.0
+  37140 237.0
+  36990 161.0
+  33678 230.0
+  28506 170.0
+  27895 162.0
+  27485 48.0
+  26782 142.0
+  25051 239.0
+  24609 234.0
+bash-4.4$ head -n 10 dropoff-count.txt [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccut -d ',' -f 9 5-2019-3_or_more.csv | sort | uniq -c | sort -nr > dropoff-count.txt[C[C[C[C[C[C[C[C[C[Cls[Kcat 5-2019-3_or_more.csv [C[C[C[C[C[C[C[C[C[Cawk -F ',' '$4 >= 3' 2019-05.csv > 5-2019-3_or_more.csv[C[C[C[C[C[C[C[C[C[Cls[Ksort -n total_amounts.txt | tail -n 1[C[C[C[C[C[C[C[C[C[C[1Pecho "scale=2; $sum/$numamount" | bc[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[18P$numamount" [7Psum"[1P "$sum"o "$sum/$numamount" | bc[C[C[C[C[C[C[C[C[C[Cnumamount=$(cat total_amounts.txt | wc -l)[C[C[C[C[C[C[C[C[C[C[7@sum=$(cat total_amounts.txt | paste -sd+ | b[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccut -d ',' -f 17 may_11_data.csv > total_amounts.txt[C[C[C[C[C[C[C[C[C[Cexit[Kcut -d ',' -f 17 may_11_data.csv > total_amounts.txt[C[C[C[C[C[C[C[C[C[C[31Phead may_11_data.csv [C[C[C[C[C[C[C[C[C[Ccut -d ',' -f 17 may_11_data.csv > total_amounts.txt[C[C[C[C[C[C[C[C[C[C[31Phead may_11_data.csv [2@total_amounts.txt[C[C[C[C[C[C[C[C[C[C[Ccut -d ',' -f 18 may_11_data.csv > total_amounts.txt[C[C[C[C[C[C[C[C[C[C[29Phead total_amounts.txt [C[C[C[C[C[C[C[C[C[Ccut -d ',' -f 17 may_11_data.csv > total_amounts.txt[C[C[C[C[C[C[C[C[C[C[Clear[Khead total_amounts.txt [C[C[C[C[C[C[C[C[C[Ccut -d ',' -f 8 may_11_data.csv > total_amounts.txt[C[C[C[C[C[C[C[C[C[C[28Phead total_amounts.txt [C[C[C[C[C[C[C[C[C[Ccut -d ',' -f 9 may_11_data.csv > total_amounts.txt[C[C[C[C[C[C[C[C[C[C[28Phead total_amounts.txt [C[C[C[C[C[C[C[C[C[Ccut -d ',' -f 10 may_11_data.csv > total_amounts.txt[C[C[C[C[C[C[C[C[C[C[31Phead may_11_data.csv [C[C[C[C[C[C[C[C[C[Cgrep "0,\"2019-05-11" /mnt/scratch/yar23fa/cs131/a2/2019-05.csv > may_11_data.csv[C[C[C[C[C[C[C[C[C[Cexit[Kgrep "0,\"2019-05-11" /mnt/scratch/yar23fa/cs131/a2/2019-05.csv > may_11_data.csv[C[C[C[1P[1P[1@2[1@0[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P_data.csv[1P_data.csv2_data.csv0_data.csv
+bash-4.4$ head may_[K_20_data.csv 
+2.0,"2019-05-20 00:00:58.000000","2019-05-20 00:10:38.000000",1.0,3.73,1.0,N,79.0,236.0,1.0,12.0,0.5,0.5,3.16,0.0,0.3,18.96,2.5
+2.0,"2019-05-20 00:03:44.000000","2019-05-20 00:26:48.000000",1.0,5.06,1.0,N,68.0,41.0,2.0,19.5,0.5,0.5,0.0,0.0,0.3,23.3,2.5
+2.0,"2019-05-20 00:01:18.000000","2019-05-20 00:13:24.000000",1.0,3.23,1.0,N,238.0,48.0,1.0,12.5,0.5,0.5,1.0,0.0,0.3,17.3,2.5
+2.0,"2019-05-20 00:00:29.000000","2019-05-20 00:22:40.000000",1.0,9.91,1.0,N,138.0,230.0,1.0,29.5,0.5,0.5,6.08,6.12,0.3,45.5,2.5
+2.0,"2019-05-20 01:33:40.000000","2019-05-20 02:12:29.000000",1.0,22.29,1.0,N,132.0,265.0,2.0,59.0,0.5,0.5,0.0,6.12,0.3,66.42,0.0
+2.0,"2019-05-20 00:08:07.000000","2019-05-20 00:30:58.000000",1.0,10.34,1.0,N,138.0,142.0,1.0,30.5,0.5,0.5,8.08,6.12,0.3,48.5,2.5
+2.0,"2019-05-20 00:00:59.000000","2019-05-20 00:15:19.000000",2.0,6.51,1.0,N,170.0,33.0,1.0,19.5,0.5,0.5,4.66,0.0,0.3,27.96,2.5
+2.0,"2019-05-20 00:01:33.000000","2019-05-20 00:07:39.000000",1.0,1.65,1.0,N,164.0,114.0,2.0,7.0,0.5,0.5,0.0,0.0,0.3,10.8,2.5
+2.0,"2019-05-20 00:01:25.000000","2019-05-20 00:11:03.000000",3.0,1.88,1.0,N,100.0,90.0,2.0,9.0,0.5,0.5,0.0,0.0,0.3,12.8,2.5
+2.0,"2019-05-20 00:32:17.000000","2019-05-20 00:52:28.000000",3.0,9.15,1.0,N,48.0,243.0,1.0,27.0,0.5,0.5,6.16,0.0,0.3,36.96,2.5
+
+#task 4
+bash-4.4$ cut -d ',' -f 8 may_20_data.csv | sort | uniq -c | sort -nr > pickup_counts.txt
+bash-4.4$ head -n 1 pickup_counts.txt 
+  12002 237.0
+#task 5
+bash-4.4$ for file in *.csv
+> do
+> cut -d ',' -f 8 "$file" | sort | uniq -c > all_pickup_counts.txt
+> done
+bash-4.4$  head all_pickup_counts.txt 
+   8644 1.0
+  31129 10.0
+1725187 100.0
+   2237 101.0
+   2097 102.0
+      1 104.0
+    117 105.0
+   9811 106.0
+1896669 107.0
+   1711 108.0
+bash-4.4$ sort -nr -o all_pickup_counts.txt all_pickup_counts.txt 
+bash-4.4$ head all_pickup_counts.txt 
+3641682 237.0
+3450649 161.0
+3291351 236.0
+3046788 162.0
+3027440 186.0
+2900733 230.0
+2729607 132.0
+2678275 48.0
+2604081 170.0
+2534767 234.0
+bash-4.4$ head  -n 1 all_pickup_counts.txt   
+3641682 237.0
+bash-4.4$ exit
+exit
+
+Script done on 2023-09-26 21:44:04-04:00

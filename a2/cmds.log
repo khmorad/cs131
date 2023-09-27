@@ -1,0 +1,20 @@
+ 1001  mkdir a2
+ 1002  cd a2
+ 1003  cd ..
+ 1004  cd ws5
+ 1005  ls
+ 1006  head 2019-08.csv 
+ 1007  c d..
+ 1008  cd ..
+ 1009  ls
+ 1010  cd a2/
+ 1011  cp /datasets/taxidata.tar.gz .
+ 1012  ls
+ 1013  tar -xzvf taxidata.tar.gz
+ 1080  script a2.txt
+ #the commands should be included in a2.txt 
+ 1083  script a2.txt
+ 1084  pwd
+ 1085  ls
+ 1086  nano a2.txt 
+ 1087  history > cmds.log
