@@ -13,6 +13,34 @@
  1013  tar -xzvf taxidata.tar.gz
  1080  script a2.txt
  #the commands should be included in a2.txt 
+ #although the commands are not recorded ill mention in here
+ #***************************************************************************************
+ #task1
+ bash-4.4$ cut -d ',' -f 17 may_11_data.csv > total_amounts.txt
+ bash-4.4$ sum=$(cat total_amounts.txt | paste -sd+ | bc -l)
+ bash-4.4$ numamount=$(cat total_amounts.txt | wc -l
+ bash-4.4$ echo "$sum/$numamount" | bc
+ #task2
+ bash-4.4$ echo "scale=2; $sum/$numamount" | bc
+ bash-4.4$ sort -n total_amounts.txt | tail -n 1
+ #task 3
+ bash-4.4$ awk -F ',' '$4 >= 3' 2019-05.csv > 5-2019-3_or_more.csv
+ bash-4.4$ cut -d ',' -f 9 5-2019-3_or_more.csv | sort | uniq -c | sort -nr > dropoff-count.txt
+ bash-4.4$ head dropoff-count.txt 
+ #task 4
+ bash-4.4$ cut -d ',' -f 8 may_20_data.csv | sort | uniq -c | sort -nr > pickup_counts.txt
+ bash-4.4$ head -n 1 pickup_counts.txt 
+ #task 5
+ bash-4.4$ for file in *.csv
+ > do
+ > cut -d ',' -f 8 "$file" | sort | uniq -c > all_pickup_counts.txt
+ > done
+ bash-4.4$  head all_pickup_counts.txt 
+ bash-4.4$ sort -nr -o all_pickup_counts.txt all_pickup_counts.txt 
+ bash-4.4$ head all_pickup_counts.txt 
+ bash-4.4$ head  -n 1 all_pickup_counts.txt 
+#*********************************************************************************8
+
  1083  script a2.txt
  1084  pwd
  1085  ls
