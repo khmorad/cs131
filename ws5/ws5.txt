@@ -1,0 +1,4 @@
+  180345 /mnt/scratch/yar23fa/cs131/ws5/do234/1.0.txt
+    4416 /mnt/scratch/yar23fa/cs131/ws5/do234/48.0.txt
+     155 /mnt/scratch/yar23fa/cs131/ws5/do234/223.0.txt
+  184916 total

@@ -1,0 +1,16 @@
+ 1114  clear
+ 1115  cd ws5
+ 1116  ls
+ #extracting the entries that have picup locaiton 234 "8th column"
+ 1118  awk -F ',' '$7=="N" && $8==234.0 {print $0}' 2019-08.csv > filtered_data.csv
+ 1119  head filtered_data.csv
+ #top 100 drop-off locations
+ 1120cut -d ',' -f 9 filtered_data.csv | sort | uniq -c | sort -rn | head -n 100 > top_100_dropoff.t 
+ 1121  cut -d ',' -f 9 filtered_data.csv | sort | uniq -c | sort -rn | head -n 100 > top_100_dropoff.tx
+ 1122  for dolocationid in $(cut -d ',' -f 9 top_100_dropoff.txt); do
+ 1123  grep ",$dolocationid," filtered_data.csv > "cs131/ws5/do234/$dolocationid.txt"
+ 1124  done
+ #im suspecting my for loop is not working currectly since im getting nothing
+ 1125  wc -l /mnt/scratch/yar23fa/cs131/ws5/do234/1.0.txt /mnt/scratch/yar23fa/cs131/ws5/do234/3.0.txt /mnt/scratch/yar23fa/cs131/ws5/do234/48.0.txt /mnt/scratch/yar23fa/cs131/ws5/do234/223.0.txt > /mnt/scratch/yar23fa/cs131/ws5/ws5.txt
+ 1126  done
+ 1127  history > cmds.log

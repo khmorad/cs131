@@ -1,0 +1,51 @@
+[yar23fa@sjsu ws5]$ awk -F ',' '$7=="N" && $8==234.0 {print $0}' 2019-08.csv > filtered_data.csv
+[yar23fa@sjsu ws5]$ head filtered_data.csv
+1.0,"2019-08-01 00:47:20.000000","2019-08-01 01:21:45.000000",1.0,7.3,1.0,N,234.0,61.0,1.0,28.0,3.0,0.5,7.95,0.0,0.3,39.75,2.5
+1.0,"2019-08-01 00:04:51.000000","2019-08-01 00:09:06.000000",1.0,1.2,1.0,N,234.0,249.0,1.0,5.5,3.0,0.5,1.0,0.0,0.3,10.3,2.5
+2.0,"2019-08-01 00:02:55.000000","2019-08-01 00:13:56.000000",5.0,2.3,1.0,N,234.0,43.0,1.0,10.0,0.5,0.5,2.76,0.0,0.3,16.56,2.5
+2.0,"2019-08-01 00:53:47.000000","2019-08-01 01:04:57.000000",1.0,4.21,1.0,N,234.0,236.0,2.0,13.5,0.5,0.5,0.0,0.0,0.3,17.3,2.5
+1.0,"2019-08-01 00:04:54.000000","2019-08-01 00:12:48.000000",1.0,1.3,1.0,N,234.0,68.0,1.0,7.0,3.0,0.5,2.15,0.0,0.3,12.95,2.5
+2.0,"2019-08-01 00:04:28.000000","2019-08-01 00:07:09.000000",1.0,0.77,1.0,N,234.0,90.0,1.0,4.5,0.5,0.5,1.0,0.0,0.3,9.3,2.5
+2.0,"2019-08-01 00:47:55.000000","2019-08-01 00:50:45.000000",1.0,0.64,1.0,N,234.0,90.0,1.0,4.5,0.5,0.5,2.08,0.0,0.3,10.38,2.5
+1.0,"2019-08-01 00:31:22.000000","2019-08-01 00:45:04.000000",2.0,3.8,1.0,N,234.0,239.0,1.0,13.5,3.0,0.5,3.45,0.0,0.3,20.75,2.5
+1.0,"2019-08-01 00:26:27.000000","2019-08-01 00:30:12.000000",1.0,0.9,1.0,N,234.0,161.0,1.0,5.0,3.0,0.5,1.75,0.0,0.3,10.55,2.5
+2.0,"2019-08-01 00:58:07.000000","2019-08-01 01:01:32.000000",1.0,0.52,1.0,N,234.0,170.0,1.0,4.5,0.5,0.5,1.66,0.0,0.3,9.96,2.5
+[yar23fa@sjsu ws5]$ script ws5.txt
+Script started, file is ws5.txt
+bash-4.4$ ^C
+bash-4.4$ cut -d ',' -f 9 filtered_data.csv | sort | uniq -c | sort -rn | head -n 100 > top_100_dropoff.txt
+bash-4.4$ pwd
+/mnt/scratch/yar23fa/cs131/ws5
+bash-4.4$ for dolocationid in $(cut -d ',' -f 9 top_100_dropoff.txt); do
+> if [ -n "$dolocationid" ]; then
+> grep ",$dolocationid," filtered_data.csv > "/mnt/scratch/yar23fa/cs131/ws5/do234/$dolocationid.txt"
+> fi
+> done
+bash-4.4$ wc -l mnt/scratch/yar23fa/cs131/ws5/do234/1.0.txt cs131/ws5/do234/3.0.txt mnt/scratch/yar23fa/cs131/ws5/do234/223.0.txt > ws5.txt
+wc: mnt/scratch/yar23fa/cs131/ws5/do234/1.0.txt: No such file or directory
+wc: cs131/ws5/do234/3.0.txt: No such file or directory
+wc: mnt/scratch/yar23fa/cs131/ws5/do234/223.0.txt: No such file or directory
+bash-4.4$ ls
+2019-08.csv  do234  dropofflocations.txt  filtered_data.csv  top_100_dropoff.txt  ws5.txt
+bash-4.4$ cd do234/
+bash-4.4$ ls
+100.0.txt  1131.txt   132.0.txt  147.txt     1606.txt   184.txt    223.0.txt  24.0.txt   256.txt    313.txt   390.txt   4403.txt  5202.txt  61.txt    75.0.txt  899.txt
+100.txt    114.0.txt  132.txt    148.0.txt   161.0.txt  186.0.txt  224.0.txt  2413.txt   260.0.txt  3163.txt  393.txt   4416.txt  52.0.txt  621.txt   7606.txt  90.0.txt
+1012.txt   114.txt    1330.txt   148.txt     161.txt    189.0.txt  225.0.txt  242.txt    261.0.txt  3203.txt  3948.txt  4445.txt  521.txt   6288.txt  7698.txt  9051.txt
+1015.txt   1157.txt   1348.txt   1490.txt    162.0.txt  198.0.txt  226.0.txt  243.0.txt  262.0.txt  321.txt   40.0.txt  4463.txt  532.txt   62.txt    79.0.txt  91.txt
+101.txt    116.0.txt  136.txt    150.txt     1625.txt   1982.txt   226.txt    2431.txt   263.0.txt  329.txt   4.0.txt   45.0.txt  5509.txt  6378.txt  80.0.txt  9200.txt
+102.txt    118.txt    137.0.txt  151.0.txt   163.0.txt  1987.txt   228.0.txt  244.0.txt  2638.txt   33.0.txt  41.0.txt  450.txt   5572.txt  6463.txt  818.txt   92.txt
+1033.txt   12.0.txt   137.txt    1516.txt    163.txt    199.txt    229.0.txt  246.0.txt  264.0.txt  3381.txt  412.txt   457.txt   5584.txt  64.txt    82.0.txt  94.txt
+1035.txt   12365.txt  138.0.txt  152.0.txt   164.0.txt  2004.txt   230.0.txt  246.txt    265.0.txt  338.txt   414.txt   4585.txt  5643.txt  65.0.txt  8270.txt  95.0.txt
+106.0.txt  1241.txt   138.txt    152.txt     166.0.txt  2007.txt   231.0.txt  247.txt    2665.txt   3428.txt  4179.txt  4670.txt  5800.txt  66.0.txt  827.txt   95.txt
+107.0.txt  1245.txt   140.0.txt  1533.txt    166.txt    2015.txt   231.txt    249.0.txt  266.txt    3450.txt  42.0.txt  468.txt   582.txt   67.txt    82.txt    97.0.txt
+107.txt    125.0.txt  14.0.txt   1536.txt    170.0.txt  202.txt    232.0.txt  249.txt    2727.txt   3481.txt  423.txt   469.txt   5898.txt  68.0.txt  8392.txt
+108.txt    12512.txt  141.0.txt  1554.txt    17.0.txt   2039.txt   233.0.txt  2501.txt   2756.txt   36.0.txt  4242.txt  471.txt   589.txt   68.txt    854.txt
+1.0.txt    1255.txt   142.0.txt  155.txt     173.txt    203.txt    234.0.txt  25.0.txt   3014.txt   37.0.txt  429.txt   477.txt   58.txt    69.txt    87.0.txt
+1106.txt   1267.txt   143.0.txt  1563.txt    175.txt    204.txt    236.0.txt  250.txt    304.txt    370.txt   43.0.txt  478.txt   5996.txt  7042.txt  871.txt
+110.txt    127.0.txt  143.txt    156.txt     176.txt    208.txt    236.txt    2541.txt   3051.txt   379.txt   430.txt   48.0.txt  6059.txt  7.0.txt   87.txt
+112.0.txt  129.0.txt  144.0.txt  157408.txt  179.0.txt  209.0.txt  237.0.txt  254.txt    3099.txt   3816.txt  432.txt   49.0.txt  60.txt    7137.txt  88.0.txt
+1125.txt   1290.txt   145.0.txt  158.0.txt   180.txt    211.0.txt  238.0.txt  255.0.txt  310.txt    3870.txt  4359.txt  50.0.txt  61.0.txt  71.txt    884.txt
+113.0.txt  13.0.txt   146.0.txt  1605.txt    181.0.txt  219.txt    239.0.txt  256.0.txt  3139.txt   3898.txt  4395.txt  5148.txt  616.txt   74.0.txt  89.0.txt
+bash-4.4$ pwd
+
