@@ -1,0 +1,34 @@
+
+ 1003  mkdir ws6
+ 1004  cd ws6
+ 1005  cp /datasets/taxidata.tar.gz .
+ 1006  ls
+ 1007  tar -xzvf taxidata.tar.gz
+ 1008  ls
+ 1009  cd taxidata/
+ 1010  ls
+ 1011  mv 2019-11.csv ..
+ 1012  cd ..
+ 1013  ls
+ 1014  head 2019-11.csv 
+ 1015  clear
+ #1) collect lines with vendor 2.0 and assigning it to vendor2.csv
+ 1016  sed -n '/^2\.0,/p' 2019-11.csv > vendor2.csv
+ 1017  ls
+ 1018  head vendor2.csv 
+ #2) remove all colons (:), double quotes ("), and hyphens (-) 
+ 1019  sed 's/[:,\"\-]//g' 2019-11.csv > no-separators.csv
+ 1020  ls
+ 1021  head no-separators.csv 
+ #3) now remove fractional parts of all numbers
+ 1022  sed 's/\.[0-9]*//g' no-separators.csv > no-fractions.csv
+ 1023  head no-separators.csv 
+ 1024  ls
+ #importin the head of these two files into a seperate .csv for presentation
+ 1025  head -10 no-separators.csv > no-separatore-head.csv
+ 1026  head -10 no-fractions.csv > no-fractions-head.csv
+ 1027  ls
+ 1028  rm taxidata.tar.gz 
+ 1029  cd taxidata/
+ 1030  ls
+ 1031  history > cmds.log
