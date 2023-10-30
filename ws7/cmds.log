@@ -1,0 +1,33 @@
+  #creating ws7 directory
+  978  mkdir ws7
+  979  cd ws7
+  980  cp /datasets/taxidata.tar.gz .
+  981  ls
+  982  tar -xzvf taxidata.tar.gz
+  983  ls
+  984  cd taxidata/
+  #moved 2019 december data out of taxidata file
+  985  mv 2019-12.csv ..
+  # getting rid of taxidata file
+  986  rm *
+  987  cd ..
+  988  rmdir taxidata/
+  989  ks
+  990  ls
+  991  rm taxidata.tar.gz 
+  992  head -n 100 2019-12.csv 
+  993  pwd
+  #using -F since the seperators tend to be ","  then its checking if the 15 column
+  #(total amoumt) is more than or equal to 10 which then it will
+  #incriment the frequency of tip amount
+  994  awk -F, '$15 >= 10.0 {tip_amount[$17]++} END {for (tip in tip_amount) print tip, tip_amount[tip]}' 2019-12.csv > results.txt
+  996  ls
+  997  head results.txt
+  #2) find the 20 most common tips on result.txt file and save to ws7.txt
+  #now sorting the second column (frequency)of result.txt which is the fre
+  998  sort -k2,2nr results.txt | head -n 20 > ws7.txt
+  999  head ws7.txt 
+ 1000  cd cs131
+ 1001  cd ws7
+ 1002  ls
+ 1003  history > cmds.log
