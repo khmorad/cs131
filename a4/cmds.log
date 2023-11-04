@@ -1,0 +1,16 @@
+ 1061  cd a4/
+ 1062  ls
+ 1063  head movies.csv 
+ 1064  head -n 100 movies.csv 
+ 1065  vim movies.csv 
+ 1066  clear
+ 1067  ls
+ 1068  vim movies.csv 
+ 1069  vim cleanup.sh
+ 1070  nano cleanup.sh 
+ 1071  chmod u+rx cleanup.sh 
+ 1072  ./cleanup.sh movies.csv 
+ 1073  vim movies.csv 
+ 1074  ls
+ 1075  history cmds.log
+ 1076  history > cmds.log
