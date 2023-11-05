@@ -18,7 +18,7 @@ The solution involved writing a shell script that utilized the `sed` command. Th
 ## Usage
 
 1. Place the CSV file with movie data in the same directory as the script.
-2. Run the script by executing `./fix_dates.sh movies.csv`.
+2. Run the script by executing `./cleanup.sh movies.csv`.
 
 The modified CSV file will have the date format fixed, and the original file will be backed up with the extension `.bak`.
 
