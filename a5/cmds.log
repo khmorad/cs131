@@ -1,0 +1,42 @@
+
+
+  507  head -n 200 cereal.csv 
+  508  clear
+  509  ls
+  #
+  510  awk -F',' 'NR>1 {print $4}' cereal.csv > calories_data.txt
+  511  ls
+  512  cat calories_data.txt 
+  513  ls
+  514  clear
+  515  ls
+  516  rm calories_data.txt 
+  517  ls
+  519  awk -F',' 'NR>1 {print $4}' cereal.csv > calories_data.txt
+  520  awk -F',' 'NR>1 {print $5, $6}' cereal.csv > protein_fat_data.txt
+  521  cat calories_data.txt 
+  #histogram plot for clorie distribution
+	set boxwidth 10
+	binwidth=10
+	bin(x,width)=width*floor(x/width) + binwidth/2.0
+	set term png
+	set output 'calories_histogram.png'
+	set xlabel 'Calories'
+	set ylabel 'Frequency'
+	set title 'Calories Distribution'
+	plot 'calories_data.txt' using (bin($1,binwidth)):(1.0) smooth freq with boxes notitle
+ 
+  535  head -n 200 cereal.csv 
+  536  echo no it might work
+  537  awk -F ',' 'NR>1 {print $4, $10}' cereal.csv > calories_sugar_data.txt
+  538  cat calories_sugar_data.txt
+  #scatter plot for the
+       set term png
+       set output 'calories_vs_sugar_scatterplot.png'
+       set xlabel 'Calories'
+       set ylabel 'Sugar Content'
+       set title 'Calories vs Sugar Content'
+       plot 'calories_sugar_data.txt' using 1:2 with points pointtype 7 pointsize 1 title 'Cereals'
+
+
+  539  history > cmds.log
