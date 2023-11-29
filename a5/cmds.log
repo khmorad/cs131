@@ -12,10 +12,15 @@
   515  ls
   516  rm calories_data.txt 
   517  ls
+  #using awk to retreive data in the 4th column
   519  awk -F',' 'NR>1 {print $4}' cereal.csv > calories_data.txt
+  #for the second analysis I use awk command again to retreive the fifth and sixth column dataset 
   520  awk -F',' 'NR>1 {print $5, $6}' cereal.csv > protein_fat_data.txt
   521  cat calories_data.txt 
+  #these gnu plot commands where executed in gnu application not in bash terminal
   #histogram plot for clorie distribution
+  #The using keyword tendto specify how the data should be used for plotting which tend to bin
+  #the data into specific intervals mainly determined by the binwidth
 	set boxwidth 10
 	binwidth=10
 	bin(x,width)=width*floor(x/width) + binwidth/2.0
