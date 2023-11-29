@@ -1,16 +1,6 @@
 
 
   507  head -n 200 cereal.csv 
-  508  clear
-  509  ls
-  #
-  510  awk -F',' 'NR>1 {print $4}' cereal.csv > calories_data.txt
-  511  ls
-  512  cat calories_data.txt 
-  513  ls
-  514  clear
-  515  ls
-  516  rm calories_data.txt 
   517  ls
   #using awk to retreive data in the 4th column
   519  awk -F',' 'NR>1 {print $4}' cereal.csv > calories_data.txt
